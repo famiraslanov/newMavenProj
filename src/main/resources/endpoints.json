@@ -1,0 +1,4 @@
+{
+  "krakenAssets" :"https://api.kraken.com/0/public/Assets",
+  "tradePrice" : "https://api.kraken.com/0/public/Trades?pair=%sUSD&since=%d&count=1"
+}
