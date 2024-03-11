@@ -9,7 +9,7 @@ public class MainPage extends BasePage{
 
     //WebDriver driver = new ChromeDriver();
 
-    WebElement pricesButton = Singletone.getDriver().findElement(By.xpath("//a[@href ='/prices' and text() = 'Prices']"));
+    By pricesButton = By.xpath("//a[@href ='/prices' and text() = 'Prices']");
 
     public MainPage() {
         super(By.xpath("//a[@href = 'https://kraken.app.link/home-hero-ios']"));//appStoreButton
@@ -17,7 +17,7 @@ public class MainPage extends BasePage{
 
 
     public void clickPricesButton(){
-        pricesButton.click();
+        Singletone.getDriver().findElement(pricesButton).click();
     }
 
 }
