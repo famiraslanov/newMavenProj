@@ -1,5 +1,5 @@
 package elements;
-import browser.Singletone;
+import browser.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import utils.DriverUtils;
@@ -12,14 +12,7 @@ public abstract class BaseElement {
         this.locator = locator;
     }
 
-    public boolean isElementExist() {
-        DriverUtils.waitForPageLoad();
-
-        try {
-            Singletone.getDriver().findElement(locator);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+    public void Click(){
+        DriverManager.getDriver().findElement(this.locator).click();
     }
 }

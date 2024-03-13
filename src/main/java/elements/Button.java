@@ -1,14 +1,12 @@
 package elements;
 
-import browser.Singletone;
+import browser.DriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Button extends BaseElement {
     public Button(By webElement) {
         super(webElement);
     }
 
-    public void Click(){
-        Singletone.getDriver().findElement(this.locator).click();
-    }
 }

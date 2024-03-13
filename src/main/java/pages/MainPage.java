@@ -1,15 +1,12 @@
 package pages;
 
-import browser.Singletone;
+import browser.DriverManager;
+import elements.Button;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class MainPage extends BasePage{
 
-    //WebDriver driver = new ChromeDriver();
-
-    By pricesButton = By.xpath("//a[@href ='/prices' and text() = 'Prices']");
+    Button pricesButton =new Button(By.xpath("//a[@href ='/prices' and text() = 'Prices']"));
 
     public MainPage() {
         super(By.xpath("//a[@href = 'https://kraken.app.link/home-hero-ios']"));//appStoreButton
@@ -17,7 +14,7 @@ public class MainPage extends BasePage{
 
 
     public void clickPricesButton(){
-        Singletone.getDriver().findElement(pricesButton).click();
+        pricesButton.Click();
     }
 
 }
